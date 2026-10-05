@@ -1,0 +1,23 @@
+# Archivos generados por Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.iml
+.idea/
+.vscode/
+
+# Plataformas generadas con "flutter create ." (se vuelven a crear en cada equipo)
+android/
+ios/
+linux/
+macos/
+windows/
+web/
+
+# Archivos locales
+local.properties
+pubspec.lock

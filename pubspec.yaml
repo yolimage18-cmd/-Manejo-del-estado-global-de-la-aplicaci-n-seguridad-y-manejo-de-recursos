@@ -1,0 +1,49 @@
+name: fichaje_app
+description: "Fichaje de Jornada: marca entrada y salida con el nombre del lugar. Estado global (Provider), sesión segura (SecureStorage) y permisos de geolocalización (Tarea 02)."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.6
+
+  # Gestor de estado global (visto en el módulo, Ejercicio 7: Provider)
+  provider: ^6.1.2
+
+  # SEGURIDAD: guarda el token de sesión y las credenciales cifradas
+  # (en Android usa EncryptedSharedPreferences + Android Keystore).
+  flutter_secure_storage: ^9.2.2
+
+  # SEGURIDAD: hash SHA-256 para no guardar nunca la contraseña en texto plano.
+  crypto: ^3.0.3
+
+  # Datos NO sensibles (historial de marcaciones) — visto en el módulo, Ejercicio 9.
+  shared_preferences: ^2.2.3
+
+  # RECURSOS: control explícito de permisos (visto en el módulo: permission_handler).
+  permission_handler: ^11.3.1
+
+  # RECURSO DEL DISPOSITIVO: geolocalización (GPS).
+  geolocator: ^13.0.1
+
+  # Convierte coordenadas en nombre de lugar (ciudad, barrio, calle).
+  geocoding: ^3.0.0
+
+  # Respaldo para obtener el nombre del lugar (OpenStreetMap) y llamadas HTTP (Ejercicio 8).
+  http: ^1.2.1
+
+  # Formato de fechas y horas legible en la interfaz.
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
